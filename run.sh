@@ -14,7 +14,5 @@ sed -i "s@_PORT_@$PORT@g" /server/server.cfg
 sed -i "s@_HOSTNAME_@$HOSTNAME@g" /server/server.cfg
 sed -i "s@_KEY_@$KEY@g" /server/server.cfg
 
-cat /server/server.cfg
-
 cd /server
 sh ./FXServer/run.sh +exec server.cfg
