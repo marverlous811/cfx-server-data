@@ -1,0 +1,2 @@
+powershell -command "Start-BitsTransfer -Source https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/1213-03fb4f2c9cddc515e2960ae895c71244a7a021ba/server.zip -Destination .\server.zip"
+powershell -command "Expand-Archive server.zip .\FXServer"

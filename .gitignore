@@ -3,3 +3,7 @@ CitizenMP.Server.exe.config
 NLog.config
 /cache/
 /resources/\[local\]/
+server.cfg
+FXServer
+*.zip
+*.tar.xz
