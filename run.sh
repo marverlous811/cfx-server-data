@@ -15,4 +15,7 @@ sed -i "s@_HOSTNAME_@$HOSTNAME@g" /server/server.cfg
 sed -i "s@_KEY_@$KEY@g" /server/server.cfg
 
 cd /server
-sh ./FXServer/run.sh +exec server.cfg
+# sh ./FXServer/run.sh +exec server.cfg
+exec ./FXServer/alpine/opt/cfx-server/ld-musl-x86_64.so.1 \
+    --library-path "./FXServer/alpine/usr/lib/v8/:./FXServer/alpine/usr/lib/:./FXServer/alpine/lib" -- \
+    ./FXServer/alpine/opt/cfx-server/FXServer +set citizen_dir ./FXServer/alpine/opt/cfx-server/citizen/ +exec server.cfg

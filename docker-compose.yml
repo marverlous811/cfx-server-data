@@ -1,6 +1,9 @@
 server:
-  image: marverlous/gta-server:0.0.1
+  image: marverlous/gta-server:0.0.2
   ports: 
     - 30120:30120
+    - 30120:30120/udp
+    - 30110:30110
+  tty: true
   environment:
-    - KEY="tok94qk5qrw33lwi58ju5xw0urztw67g"
+    - KEY=tok94qk5qrw33lwi58ju5xw0urztw67g
